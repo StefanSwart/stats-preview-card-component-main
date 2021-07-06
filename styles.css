@@ -63,6 +63,14 @@ p {
   color: hsl(0, 0%, 100%);
 }
 
+.num1 {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: hsl(0, 0%, 100%);
+  text-transform: lowercase;
+}
+
 #mainCard h3 {
   font-family: "Inter", sans-serif;
   font-weight: 400;
@@ -71,47 +79,65 @@ p {
   color: hsla(0, 0%, 100%, 0.6);
 }
 
-#image {
-  border-radius: 0 10px 10px 0;
-  height: 440px;
-}
-
 #stats {
   display: flex;
   justify-content: space-between;
-}
-
-.item {
-  align-self: flex-end;
-}
-
-.imgbg {
-  background-color: hsl(277, 64%, 61%);
 }
 
 #imgContainer {
   height: 100%;
   width: 70%;
   background: linear-gradient(
-      hsla(277, 64%, 61%, 0.5),
-      hsla(277, 64%, 61%, 0.5)
+      hsla(277, 64%, 61%, 0.55),
+      hsla(277, 64%, 61%, 0.55)
     ),
     url("./images/image-header-desktop.jpg");
+  border-radius: 0 10px 10px 0;
 }
 
-/* #imgContainer {
-  height: 100%;
-  width: 70%;
-  background: linear-gradient(
-      hsla(244, 38%, 16%, 0.5),
-      hsla(244, 38%, 16%, 0.5)
-    ),
-    url("./images/image-header-desktop.jpg");
-} */
+@media (max-width: 375px) {
+  #mainCard {
+    display: flex;
+    flex-direction: column-reverse;
+    height: 785px;
+    width: 338px;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+  }
 
-/* .red {
-  outline: 220px solid hsla(277, 64%, 61%, 0.5) !important;
-  outline-offset: -220px;
-  overflow: hidden;
-  position: relative;
-} */
+  #content {
+    width: 82.5%;
+    padding: 0;
+  }
+
+  h1 {
+    font-size: 30px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+  }
+
+  p {
+    width: 88%;
+    align-self: center;
+  }
+
+  #imgContainer {
+    height: 250px;
+    width: 100%;
+    background: linear-gradient(
+        hsla(277, 64%, 61%, 0.55),
+        hsla(277, 64%, 61%, 0.55)
+      ),
+      url("./images/image-header-desktop.jpg");
+    border-radius: 10px 10px 0 0;
+    background-size: cover;
+  }
+
+  #stats {
+    display: block;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+}
